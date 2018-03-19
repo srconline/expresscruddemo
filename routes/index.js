@@ -1,7 +1,7 @@
 var express = require('express');
 var router = express.Router();
 var mongoose = require('mongoose');
-mongoose.connect('localhost:27017/test');
+mongoose.connect('mongodb://localhost:27017/test', { useMongoClient: true });
 var Schema = mongoose.Schema;
 
 var userDataSchema = new Schema({
